@@ -72,6 +72,10 @@ public class Propiedad {
 		return (float)(this.precios * PORCENTAJE) + GASTO_GESTION;
 	}
 
+	/**
+	 * Dos propiedades son iguales si coincide el codigo
+	 */
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(codigo);
@@ -89,6 +93,23 @@ public class Propiedad {
 		return Objects.equals(codigo, other.codigo);
 	}
 	
+	
+	/**
+	 * Redifinicion del metodo toString
+	 * 
+	 * LOCAL COMERCIAL
+			Beneficio obtenido: 600.0€
+			Código: 23
+			Superficie: 70.0 metros cuadrados
+			Descripción: El local no tiene baño e instalaciones de agua, luz y teléfono
+			Dirección: C/Infante, 45
+			Precio: 60000.0 €
+	 */
+	@Override
+	public String toString() {
+		return "LOCAL COMERCIAL"
+				+ "\nBeneficio obtenido";
+	}
 	
 	
 	

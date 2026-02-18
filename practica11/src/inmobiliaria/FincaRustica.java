@@ -32,7 +32,7 @@ public class FincaRustica extends Propiedad{
 	public FincaRustica(String codigo, EnumPropiedad tipo, String direccion, float metrosCuadrados,
 			String descripcion, float precios, EnumTerreno tipoTerreno, boolean luz,
 			 boolean agus, boolean vivienda) {
-		super(codigo, tipo, direccion, metrosCuadrados, descripcion, precios);
+		super(codigo, EnumPropiedad.FINCA, direccion, metrosCuadrados, descripcion, precios);
 		this.tipoTerreno = tipoTerreno;
 		this.luz = luz;
 		this.agus = agus;
