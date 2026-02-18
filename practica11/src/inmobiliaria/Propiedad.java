@@ -1,5 +1,7 @@
 package inmobiliaria;
 
+import java.util.Objects;
+
 public class Propiedad {
 	
 	/**
@@ -68,6 +70,23 @@ public class Propiedad {
 	
 	public float beneficio () {
 		return (float)(this.precios * PORCENTAJE) + GASTO_GESTION;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(codigo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Propiedad other = (Propiedad) obj;
+		return Objects.equals(codigo, other.codigo);
 	}
 	
 	

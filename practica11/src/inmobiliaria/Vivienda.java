@@ -34,7 +34,7 @@ public class Vivienda extends Propiedad{
 	public Vivienda(String codigo, EnumPropiedad tipo, String direccion, float metrosCuadrados, 
 			String descripcion,	float precios, EnumViviendas tipoVivienda, int numBaños,
 			 int numDormitorios) {
-		super(codigo, tipo, direccion, metrosCuadrados, descripcion, precios);
+		super(codigo, EnumPropiedad.VIVIENDA, direccion, metrosCuadrados, descripcion, precios);
 		this.tipoVivienda = tipoVivienda;
 		this.numBaños = numBaños;
 		this.numDormitorios = numDormitorios;
