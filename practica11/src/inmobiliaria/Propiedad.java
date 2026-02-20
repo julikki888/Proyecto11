@@ -107,9 +107,15 @@ public class Propiedad {
 	 */
 	@Override
 	public String toString() {
-		return "LOCAL COMERCIAL"
-				+ "\nBeneficio obtenido";
+		return this.getTipo().toString()
+				+ "\nBeneficio obtenido "+this.beneficio()+"€"
+				+ "\nCodigo: "+this.getCodigo()
+				+ "\nSuperficie: "+this.getMetrosCuadrados()+ " m²"
+				+ "\nDescripcion: "+this.getDescripcion()
+				+ "\nDireccion: "+this.getDireccion()
+				+ "\nPrecio: "+ this.getPrecios()+"€";
 	}
+	
 	
 	
 	

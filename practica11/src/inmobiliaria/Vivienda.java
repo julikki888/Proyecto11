@@ -40,6 +40,20 @@ public class Vivienda extends Propiedad{
 		this.numDormitorios = numDormitorios;
 	}
 
+	
+	
+	
+	
+	public EnumViviendas getTipoVivienda() {return tipoVivienda;}
+	public int getNumBaños() {return numBaños;}
+	public int getNumDormitorios() {return numDormitorios;}
+
+	public void setTipoVivienda(EnumViviendas tipoVivienda) {this.tipoVivienda = tipoVivienda;}
+	public void setNumBaños(int numBaños) {this.numBaños = numBaños;}
+	public void setNumDormitorios(int numDormitorios) {this.numDormitorios = numDormitorios;}
+
+
+
 	/**
 	 * Override del metodo beneficio añadiendo un al beneficio inicial un
 	 * 0.25% sobre el valor de la vivienda.
@@ -49,6 +63,7 @@ public class Vivienda extends Propiedad{
 	public float beneficio() {
 		return super.beneficio() + (this.getPrecios()*PORCENTAJE_VIVIENDA);
 	}
+	
 	
 	
 }

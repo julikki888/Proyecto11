@@ -13,7 +13,7 @@ public class FincaRustica extends Propiedad{
 	 */
 	
 	private EnumTerreno tipoTerreno;
-	private boolean luz, agus, vivienda;
+	private boolean luz, agua, vivienda;
 	
 	/**
 	 * Constructor completo
@@ -26,16 +26,16 @@ public class FincaRustica extends Propiedad{
 	 * @param precios
 	 * @param tipoTerreno
 	 * @param luz
-	 * @param agus
+	 * @param agua
 	 * @param vivienda
 	 */
 	public FincaRustica(String codigo, EnumPropiedad tipo, String direccion, float metrosCuadrados,
 			String descripcion, float precios, EnumTerreno tipoTerreno, boolean luz,
-			 boolean agus, boolean vivienda) {
+			 boolean agua, boolean vivienda) {
 		super(codigo, EnumPropiedad.FINCA, direccion, metrosCuadrados, descripcion, precios);
 		this.tipoTerreno = tipoTerreno;
 		this.luz = luz;
-		this.agus = agus;
+		this.agua = agua;
 		this.vivienda = vivienda;
 	}
 	
@@ -48,6 +48,16 @@ public class FincaRustica extends Propiedad{
 	public float beneficio() {
 		return super.beneficio() + (this.getPrecios()*PORCENTAJE_FINCA);
 	}
+
+	public EnumTerreno getTipoTerreno() {return tipoTerreno;}
+	public boolean isLuz() {return luz;}
+	public boolean isAgua() {return agua;}
+	public boolean isVivienda() {return vivienda;}
+
+	public void setTipoTerreno(EnumTerreno tipoTerreno) {this.tipoTerreno = tipoTerreno;}
+	public void setLuz(boolean luz) {this.luz = luz;}
+	public void setAgua(boolean agua) {this.agua = agua;}
+	public void setVivienda(boolean vivienda) {this.vivienda = vivienda;}
 	
 	
 
