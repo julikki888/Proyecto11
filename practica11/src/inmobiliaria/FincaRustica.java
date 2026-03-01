@@ -60,6 +60,13 @@ public class FincaRustica extends Propiedad{
 	public void setVivienda(boolean vivienda) {this.vivienda = vivienda;}
 	
 	
-
+	@Override
+	public String toString() {
+		return super.toString()
+				+ "\nTipo de terreno: "+ this.tipoTerreno
+				+ (isLuz()?"\nTiene luz":"\nNo tiene luz")
+				+ (isAgua()?"\nTiene agua":"\nNo tiene agua")
+				+ (isVivienda()?"\nEs una vivienda":"\nNo es una vivienda");
+	}
 
 }
