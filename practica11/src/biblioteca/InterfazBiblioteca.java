@@ -16,9 +16,9 @@ public interface InterfazBiblioteca {
 	
 	boolean devolverLibro(String titulo, String nombre);
 	
-	String librosDisponibles();
+	StringBuilder librosDisponibles();
 	
-	String librosPrestadosUsuario(String nombre);
+	StringBuilder librosPrestadosUsuario(String nombre);
 	
 	SortedSet<Libro> copias(String titulo);
 	

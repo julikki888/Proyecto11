@@ -115,33 +115,52 @@ public class Bioblioteca implements InterfazBiblioteca{
 		return user.sacaLibro(libro);
 	}
 
+	/**
+	 * que tenga el efecto esperado	de una devolución de un Libro sacado previamente
+	 * por el usuario indicado, es decir, el libro ya no estará en la colección de 
+	 * libros sacados por el usuario, y volverá a la colección de libros de la biblioteca. 
+	 */
 	@Override
 	public boolean devolverLibro(String titulo, String nombre) {
-		// TODO Auto-generated method stub
-		return false;
+		Usuario user = this.buscarUsuario(nombre);
+		
+		if(user==null) return false;
+		
+		return this.altaLibro(user.devuelveLibro(titulo));
 	}
 
 	@Override
-	public String librosDisponibles() {
-		// TODO Auto-generated method stub
-		return null;
+	public StringBuilder librosDisponibles() {
+		StringBuilder str = new StringBuilder();
+		for (Libro libro : libros) {
+			str.append(libro.getTitulo());
+			str.append("; ");
+		}		
+		return str;
 	}
 
 	@Override
-	public String librosPrestadosUsuario(String nombre) {
-		// TODO Auto-generated method stub
-		return null;
+	public StringBuilder librosPrestadosUsuario(String nombre) {
+		StringBuilder str = new StringBuilder();
+
+		for (Usuario usu : users) {
+			for (Libro libro : usu.getLibros()) {
+				str.append(libro.getTitulo());
+				str.append("; ");
+			}
+		}		
+		return str;
 	}
 
 	@Override
 	public SortedSet<Libro> copias(String titulo) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	@Override
 	public Set<Libro> getLibrosUsuario(String nomCli) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	
