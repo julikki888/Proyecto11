@@ -154,14 +154,24 @@ public class Bioblioteca implements InterfazBiblioteca{
 
 	@Override
 	public SortedSet<Libro> copias(String titulo) {
+		SortedSet<Libro> copia = new TreeSet<>();
 		
-		return null;
+		for (Libro libro : this.libros) {
+			if (libro.getTitulo().equals(titulo)) {
+				copia.add(libro);
+			}
+		}		
+		return copia;
 	}
 
 	@Override
 	public Set<Libro> getLibrosUsuario(String nomCli) {
+		Set<Libro> usulibros = new HashSet<>();
 		
-		return null;
+		for (Libro libro : this.buscarUsuario(nomCli).getLibros()) {
+			usulibros.add(libro);
+		}
+		return usulibros;
 	}
 	
 	
